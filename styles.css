@@ -38,7 +38,7 @@ a{
 
 p{
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
 }
 .no-cursor{
   cursor: not-allowed;
@@ -320,6 +320,7 @@ SERVICES
   padding: 12px;
   color: #758294;
   max-width: 240px;
+  line-height: 2;
 }
 
 .service__title{
@@ -368,7 +369,7 @@ STEPS
 
 .steps__info{
   width: 50%;
-  padding: 0 60px;
+  padding: 0 48px;
 }
 
 .steps__img--container{
@@ -388,21 +389,97 @@ STEPS
 
 .step{
   display: flex;
+  padding: 12px 0px;
 }
 
 .step__instruction{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .grey-number{
   color: rgb(206, 210, 219);
   font-size: 32px;
   font-weight: 700;
-  padding: 0 20px;
+  padding: 0 8px;
+  margin-right: 8px;
 }
 
 .step__instruction--title{
-  font-size: 12px;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.step__instruction--para{
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 2;
+}
+
+/*
+
+VALUES
+
+*/
+
+.value__container{
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.value{
+  padding: 8px 0px;
+  margin-right: 36px;
+}
+
+.values__info{
+  width: 48%;
+  padding-right: 24px;
+}
+
+.values__img--container{
+  width: 50%;
+}
+
+.value__top{
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.value__logo--green,
+.value__logo--red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+.value__logo--green{
+  background-color: rgb(152, 239, 197);
+  padding: 8px 14px;
+}
+.value__logo--red{
+  background-color: rgb(253, 148, 148);
+}
+
+i{
+  opacity: 0.75;
+}
+
+.value__para{
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+.values__img--wrapper{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
