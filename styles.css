@@ -2,6 +2,10 @@
 :root{
   --primary-black: #243e63;
   --primary--purple: #6415ff;
+  --primary-lightgrey:rgb(226, 232, 240);
+}
+html{
+  padding: 12px;
 }
 
 *{
@@ -31,11 +35,47 @@ a{
   text-decoration: none;
 }
 
+p{
+  font-size: 16px;
+  line-height: 1.5;
+}
 .no-cursor{
   cursor: not-allowed;
 }
 
-/* NAV */
+.link__hover-effect:after{
+  content: "";
+  height: 1.5px;
+  bottom: -3px;
+  position: absolute;
+  right: 20%;
+  transition: all 300ms ease;
+  width: 60%;
+  opacity: 0;
+}
+
+.link__hover-effect--purple:after{
+  background-color: #4f10cd;
+}
+
+.link__hover-effect:hover::after{
+  opacity: 1;
+}
+
+h1{
+  font-size: 40px;
+  line-height: 1;
+}
+
+.text-purple{
+  color: var(--primary--purple);
+}
+
+/*
+
+ NAV 
+ 
+ */
 
 nav{
   display: flex;
@@ -70,7 +110,7 @@ nav{
   width: 100%;
   height: 100%;
   display: flex;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .nav__logo--link{
@@ -83,6 +123,11 @@ nav{
   margin: 0 24px;
   font-size: 14px;
   font-weight: 600;
+  transition: color 300ms ease;
+}
+
+.nav__link:hover{
+  color: #4f10cd;
 }
 
 .nav__list-element{
@@ -91,26 +136,6 @@ nav{
 
 .nav__link:nth-child(5){
   margin-left: 108px;
-}
-
-
-.link__hover-effect:after{
-  content: "";
-  height: 3px;
-  bottom: -3px;
-  position: absolute;
-  right: 20%;
-  transition: all 300ms ease;
-  width: 60%;
-  opacity: 0;
-}
-
-.link__hover-effect--black:after{
-  background-color: #243e63;
-}
-
-.link__hover-effect:hover::after{
-  opacity: 1;
 }
 
 .btn{
@@ -133,4 +158,80 @@ nav{
 
 .nav__container--left:hover .nav__logo--link{
   color: #4f10cd;
+}
+
+
+/* 
+
+ABOUT US
+
+*/
+
+.about-us__container{
+  display: flex;
+  padding: 96px 0px;
+}
+
+.about-us__info{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us__info--title{
+  color: black;
+  margin-top: 32px;
+  
+}
+
+.about-us__info--para{
+  margin: 28px 0px 32px 0;
+  font-size: 17px;
+}
+
+.about-us__info--email{
+  width: 90%;
+  align-self: flex-start;
+  padding: 16px 32px;
+  border-radius: 40px;
+  border: rgb(226, 232, 240) solid ;
+  font-size: 16px;
+
+}
+
+.btn-in-email{
+  position: relative;
+  width : 100%;
+  min-width: 460px;
+  margin-bottom: 64px;
+}
+
+.about-us__info--btn{
+  position: absolute;
+  right: 12%;
+  top: 8px;
+}
+
+input::placeholder{
+  color: rgb(195, 199, 207);
+}
+
+.about-us__info--img-cap{
+  color: rgb(122, 125, 131);
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.about-us__info--img{
+  width: 80%;
+  opacity: 0.5;
+}
+
+.about-us__img--container{
+  width:60%;
+}
+
+.about-us__img--wrapper{
+  padding:12px
 }
