@@ -79,12 +79,23 @@ h1{
 .header{
   color: #6415ff;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .flex-column{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-center{
+  text-align: center;
 }
 
 /*
@@ -210,9 +221,17 @@ ABOUT US
   align-self: flex-start;
   padding: 16px 32px;
   border-radius: 40px;
-  border: rgb(226, 232, 240) solid ;
+  border: 1px solid rgb(226, 232, 240) ;
   font-size: 16px;
+  transition: all 300ms ease;
+}
 
+.about-us__info--email:focus{
+  border-color:#4f10cd;
+}
+
+input::placeholder{
+  color: rgb(195, 199, 207);
 }
 
 .btn-in-email{
@@ -225,12 +244,14 @@ ABOUT US
 .about-us__info--btn{
   position: absolute;
   right: 12%;
-  top: 8px;
+  top: 7px;
 }
 
-input::placeholder{
-  color: rgb(195, 199, 207);
+.about-us__info--email:hover{
+  border: 1px solid #6415ff ;
 }
+
+
 
 .about-us__info--img-cap{
   color: rgb(122, 125, 131);
@@ -278,10 +299,9 @@ SERVICES
 }
 
 .section__desc{
-  max-width: 556px;
-  margin-bottom: 60px;
-  color: #758294;
-  text-align: center;
+  max-width: 544px;
+  margin-bottom: 32px;
+  color: #5a6370;
 }
 
 .service__img--wrapper{
@@ -304,4 +324,85 @@ SERVICES
 
 .service__title{
   padding-left: 12px;
+}
+
+/* 
+
+WORK 
+
+*/
+
+.work__info{
+  width: 49%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.work__img--container{
+  width: 50%;
+}
+
+.work__img{
+    border: 1px solid rgb(195, 199, 207);
+    
+}
+.work__img--wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#work{
+  margin-bottom: 60px;
+}
+/*
+
+STEPS
+
+*/
+
+
+.steps__info{
+  width: 50%;
+  padding: 0 60px;
+}
+
+.steps__img--container{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.steps__img--wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.step{
+  display: flex;
+}
+
+.step__instruction{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grey-number{
+  color: rgb(206, 210, 219);
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0 20px;
+}
+
+.step__instruction--title{
+  font-size: 12px;
 }
